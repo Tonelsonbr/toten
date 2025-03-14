@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo em Tela Cheia</title>
+    <style>
+        /* Remove margens e rolagem para ocupar toda a tela */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: black; /* Para garantir que o fundo seja preto quando o vídeo não preencher totalmente */
+        }
+
+        /* Faz o vídeo preencher toda a tela */
+        video {
+            position: fixed;  /* Fixa o vídeo no fundo */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que o vídeo se ajuste à tela sem distorcer */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+    </video>
+
+</body>
+</html>
