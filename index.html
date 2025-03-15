@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagem em Tela Cheia</title>
+    <title>Vídeo em Tela Cheia</title>
     <style>
         /* Remove margens e rolagem para ocupar toda a tela */
         body, html {
@@ -11,21 +11,24 @@
             padding: 0;
             height: 100%;
             overflow: hidden;
-            background-color: black; /* Fundo preto caso a imagem não cubra tudo */
+            background-color: black; /* Fundo preto caso o vídeo não cubra tudo */
         }
 
-        /* Faz a imagem preencher toda a tela */
-        img {
-            position: fixed;  /* Fixa a imagem na tela */
+        /* Faz o vídeo preencher toda a tela */
+        video {
+            position: fixed;  /* Fixa o vídeo na tela */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Garante que a imagem cubra a tela sem distorcer */
+            object-fit: cover; /* Garante que o vídeo cubra a tela sem distorcer */
         }
     </style>
 </head>
 <body>
-    <img src="imagem.jpg" alt="Imagem em Tela Cheia">
+    <video autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+    </video>
 </body>
 </html>
